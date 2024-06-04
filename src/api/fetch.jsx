@@ -4,7 +4,7 @@ const data = [
     slug: "glimpse-of-switzerland",
     starting_price: 99800.0,
     strike_through_price: 132900.0,
-    top_deal: true,
+    tags: ["Top Deal"],
     rating: 4.86,
     review_count: 326,
     currency: "INR",
