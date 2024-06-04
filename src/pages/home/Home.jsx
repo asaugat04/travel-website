@@ -1,12 +1,16 @@
 import TrekkingImage from "../../assets/images/trekkingimg.jpg";
+import TreekingRegionViewer from "@/components/home/treekingRegionViewer";
+import PlacesCarousel from "@/components/home/PlacesCarousel";
+import apiData from "@/api/fetch";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [data, setData] = useState([]);
+  const [loading, setloading] = useState(true);
+  useEffect(() => {
+    setData(apiData);
+  });
   const trekkingRegions = [
-    {
-      name: "Rara",
-      image:
-        "https://admin.ntb.gov.np/image-cache/rara_iw_adventure-1624440943.jpeg?p=768&s=d92dd1c1be1bc644f500dcebb932dd12",
-    },
     {
       name: "Annapurna",
       image:
@@ -40,31 +44,28 @@ export default function Home() {
           backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 50%), url(${TrekkingImage})`,
           fontFamily: '"Cedarville Cursive", cursive',
         }}
-        className="min-h-[70vh] bg-center bg-cover flex justify-center items-end font-bold text-white "
+        className="min-h-[25vh] md:min-h-[70vh] bg-center bg-cover flex justify-center items-end font-bold text-white "
       >
-        <p className="text-white-600 font-['Cedarville Cursive,cursive'] text-5xl md:text-6xl px-4 py-20 ">
+        <p className="text-white-600 font-['Cedarville Cursive,cursive'] text-5xl md:text-6xl px-4 py-7 md:py-20 ">
           Trekking in Nepal
         </p>
       </div>
-      <div className="text-center p-5 md:p-7 text-2xl  md:text-3xl font-sans font-bold">
+      <div className="text-center p-5 md:p-7 text-2xl  md:text-3xl font-sans font-bold text-yellow-600">
         Trekking Regions
       </div>
       <div className="m-auto md:w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 p-5 md:p-7 ">
         {trekkingRegions.map((region, index) => (
-          <div
-            key={index}
-            className="relative h-52 bg-cover bg-center bg-no-repeat rounded-lg hover:-mt-1 hover:shadow-lg transition-all ease-in-out duration-300"
-            style={{
-              backgroundImage: `url(${region.image})`,
-            }}
-          >
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-2 md:p-4 rounded-b-lg">
-              {region.name}
-            </div>
-          </div>
+          <TreekingRegionViewer key={index} region={region} />
         ))}
       </div>
-      hhhkjh
+      <div className="country-wise-travel-wrapper flex flex-col items-center justify-center">
+        <PlacesCarousel destination={"Switzerland"} data={data} />
+        <PlacesCarousel destination={"Nepal"} data={data} />
+        <PlacesCarousel destination={"India"} data={data} />
+        <PlacesCarousel destination={"Canada"} data={data} />
+        <PlacesCarousel destination={"Australia"} data={data} />
+        <PlacesCarousel destination={"USA"} data={data} />
+      </div>
     </div>
   );
 }
