@@ -12,12 +12,12 @@ import { Button } from "../ui/button";
 
 function DestinationCard({ place }) {
   return (
-    <Card>
+    <Card className="flex flex-col justify-around h-full">
       <CardHeader>
         <ImageCarousel images={place.images} />
       </CardHeader>
       <CardContent>
-        <div className="flex flex-row w-full justify-between text-sm py-1">
+        <div className="flex flex-row w-full justify-between text-sm py-1 pr-3 md:pr-1">
           <p className="text-slate-500 italic ">{place.summarized_duration}</p>
           <p className="text-yellow-600">
             <i className="fa-solid fa-star pr-1"></i>
@@ -42,19 +42,19 @@ function DestinationCard({ place }) {
               </React.Fragment>
             );
           })}
+        </CardDescription>
+        <div className="priceDesc pt-4">
           <span className="flex flex-row gap-2 block">
             {place?.tags &&
               place?.tags?.map((tag, key) => (
                 <span
                   key={key}
-                  className="text-xs text-white p-1 px-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 font-bold"
+                  className="text-xs text-white p-1 px-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 font-semibold uppercase py-0"
                 >
                   {tag}
                 </span>
               ))}
           </span>
-        </CardDescription>
-        <div className="priceDesc pt-4">
           <p className="text-sm text-slate-900">
             <span className="text-xl text-yellow-600 font-semibold">
               {place.currency} {place.starting_price}

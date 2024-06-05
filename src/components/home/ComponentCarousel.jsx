@@ -17,14 +17,14 @@ function ComponentCarousel({ children }) {
       opts={{
         align: "start",
       }}
-      className="w-full md:w-11/12 self-center m-auto"
+      className="w-full md:w-11/12 self-center m-auto "
     >
       <CarouselPrevious className=" -left-3 w-10 h-10 border-0 shadow-md md:-left-10 z-50  md:z-auto " />
-      <CarouselContent>
+      <CarouselContent className="sdlajflkjdsajldsjl">
         {children.map((child, index) => (
           <CarouselItem
             key={index}
-            className="md:basis-1/2 lg:basis-1/3 h-full"
+            className="md:basis-1/2 lg:basis-1/3 h-auto"
           >
             <div className="p-1 h-full">{child}</div>
           </CarouselItem>

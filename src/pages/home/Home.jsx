@@ -59,10 +59,17 @@ export default function Home() {
         ))}
       </div>
       <div className="country-wise-travel-wrapper flex flex-col items-center justify-center">
+        <h1 className="text-4xl py-5 font-bold border-t-2 mt-4  w-full text-center">
+          National tours
+        </h1>
+        <PlacesCarousel destination={"Pokhara"} data={data} />
+        <PlacesCarousel destination={"Mustang"} data={data} />
+        <PlacesCarousel destination={"Manang"} data={data} />
+
+        <h1 className="text-4xl py-5 font-bold border-t-2 mt-4  w-full text-center">
+          International tours
+        </h1>
         <PlacesCarousel destination={"Switzerland"} data={data} />
-        <PlacesCarousel destination={"Nepal"} data={data} />
-        <PlacesCarousel destination={"India"} data={data} />
-        <PlacesCarousel destination={"Canada"} data={data} />
         <PlacesCarousel destination={"Australia"} data={data} />
         <PlacesCarousel destination={"USA"} data={data} />
       </div>

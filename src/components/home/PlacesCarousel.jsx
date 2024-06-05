@@ -4,20 +4,20 @@ import DestinationCard from "./DestinationCard";
 import ComponentCarousel from "./ComponentCarousel";
 export default function PlacesCarousel({ data, destination }) {
   return (
-    <div className="flex flex-col w-11/12">
+    <div className="flex flex-col w-11/12 h-auto">
       <div className="flex flex-row justify-between p-3  py-10 md:m-auto w-full md:w-11/12">
         <h1 className="text-2xl font-bold text-left">{destination}</h1>
         <Link
-          to={PATH.switzerland}
+          to={PATH[destination.toLowerCase()]}
           className="text-yellow-600 flex items-center gap-2 font-bold"
         >
           View all
-          <span className="icon rounded-full bg-yellow-600 text-white inline-block w-7 h-7 text-center p-1">
+          <span className="icon flex items-center justify-center rounded-full bg-yellow-600 text-white inline-block w-7 h-7 text-center p-1">
             <i className="fa-solid fa-angle-right"></i>
           </span>
         </Link>
       </div>
-      <div className="flex flex-row gap-3 ">
+      <div className="flex flex-row gap-3 h-full">
         <ComponentCarousel>
           {data.map((place, index) => (
             <DestinationCard place={place} key={index} />
