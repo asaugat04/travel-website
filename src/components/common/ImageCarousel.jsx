@@ -7,19 +7,33 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
-function ImageCarousel({ images }) {
+function ImageCarousel({ images, className = "" }) {
   return (
-    <Carousel className="group" opts={{ watchDrag: false }}>
-      <CarouselPrevious className="left-0 md:hidden md:group-hover:inline-flex z-50 backdrop-blur-md" />
-      <CarouselContent>
+    <Carousel
+      plugins={[
+        Autoplay({
+          delay: 1500 + Math.random() * 1500, // to make autoplay different for each carousel
+          stopOnLastSnap: true,
+        }),
+      ]}
+      className="group"
+      opts={{ watchDrag: false }}
+    >
+      <CarouselPrevious className="left-0 md:hidden md:group-hover:inline-flex z-50 opacity-80 disabled:opacity-0" />
+      <CarouselContent className={`${className}`}>
         {images.map((image, index) => (
           <CarouselItem key={index}>
-            <img className="rounded" src={image} alt={`image-${index}`} />
+            <img
+              className="rounded w-full h-full object-cover"
+              src={image}
+              alt={`image-${index}`}
+            />
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselNext className="right-0 md:hidden md:group-hover:inline-flex z-50 backdrop-blur-md" />
+      <CarouselNext className="right-0 md:hidden md:group-hover:inline-flex z-50 opacity-80	 disabled:opacity-0" />
     </Carousel>
   );
 }

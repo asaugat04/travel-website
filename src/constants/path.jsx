@@ -2,6 +2,6 @@ const PATH = {
   HOME: "/",
   ABOUT: "/about",
   CONTACT: "/contact",
-  switzerland: "/countries/switzerland",
+  COUNTRYDETAILS: "/countries/:countryName",
 };
 export default PATH;

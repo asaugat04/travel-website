@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import ImageCarousel from "../common/ImageCarousel";
 import { Button } from "../ui/button";
+import ContactDialog from "../common/ContactDialog";
 
 function DestinationCard({ place }) {
   return (
@@ -72,12 +73,16 @@ function DestinationCard({ place }) {
           </a>
         </div>
         <div className=" w-full m-0 px-3 py-0">
-          <Button
+          {/* <Button
             variant="outline"
             className="w-full p-4 py-5 bg-yellow-600 m-0 text-white font-bold text-center hover:bg-yellow-500 hover:text-white"
-          >
-            Request Callback
-          </Button>
+          > */}
+          <ContactDialog
+            displayName="Request a call back"
+            place={place}
+            className="w-full p-4 py-5 bg-yellow-600 m-0 text-white font-bold text-center hover:bg-yellow-500 hover:text-white"
+          />
+          {/* </Button> */}
         </div>
       </CardFooter>
     </Card>
