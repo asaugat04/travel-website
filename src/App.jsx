@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/contact";
@@ -7,12 +7,12 @@ import path from "./constants/path";
 import Footer from "./components/common/Footer";
 import DestinationDetails from "./pages/destination/DestinationDetails";
 import TourDetails from "./pages/tour/TourDetails";
+import { useEffect } from "react";
 
 function App() {
   return (
-    <div>
-      <Router>
-        {window.scrollTo(0, 0)}
+    <>
+      <BrowserRouter>
         {/* <Navbar /> */}
         <Routes>
           <Route path={path.HOME} element={<Home />} />
@@ -27,9 +27,9 @@ function App() {
             element={<TourDetails />}
           />
         </Routes>
-        <Footer />
-      </Router>
-    </div>
+      </BrowserRouter>
+      <Footer />
+    </>
   );
 }
 

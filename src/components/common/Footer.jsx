@@ -1,6 +1,5 @@
 import PATH from "@/constants/path";
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -35,16 +34,16 @@ function Footer() {
                 </p>
                 <ul className="md:pl-3 text-xs pt-3 md:text-sm md:font-semibold flex flex-col md:flex-row md:flex-col ">
                   <li className="p-1 whitespace-nowrap">
-                    <Link to={PATH.ABOUT}>About Us</Link>
+                    <a href={PATH.ABOUT}>About Us</a>
                   </li>
                   <li className="p-1 whitespace-nowrap">
-                    <Link to={PATH.CONTACT}>Contact us</Link>
+                    <a href={PATH.CONTACT}>Contact us</a>
                   </li>
                   <li className="p-1 whitespace-nowrap">
-                    <Link to={PATH.POLICY}>Privacy Policy</Link>
+                    <a href={PATH.POLICY}>Privacy Policy</a>
                   </li>
                   <li className="p-1 whitespace-nowrap">
-                    <Link to={PATH.TERMS}>Terms & Conditions</Link>
+                    <a href={PATH.TERMS}>Terms & Conditions</a>
                   </li>
                 </ul>
               </div>
@@ -55,19 +54,19 @@ function Footer() {
                 </p>
                 <ul className="md:pl-3 text-xs pt-3 md:text-sm md:font-semibold flex flex-row md:flex-col ">
                   <li className="p-1 whitespace-nowrap">
-                    <Link to={PATH.TREKKING}>Trekking</Link>
+                    <a href={PATH.TREKKING}>Trekking</a>
                   </li>
                   <li className="p-1 whitespace-nowrap">
-                    <Link to={PATH.BUNGEE}>Bungee</Link>
+                    <a href={PATH.BUNGEE}>Bungee</a>
                   </li>
                   <li className="p-1 whitespace-nowrap">
-                    <Link to={PATH.RAFTING}>Rafting</Link>
+                    <a href={PATH.RAFTING}>Rafting</a>
                   </li>
                   <li className="p-1 whitespace-nowrap">
-                    <Link to={PATH.PARAGLIDING}>Paragliding</Link>
+                    <a href={PATH.PARAGLIDING}>Paragliding</a>
                   </li>
                   <li className="p-1 whitespace-nowrap">
-                    <Link to={PATH.SAFARI}>Safari</Link>
+                    <a href={PATH.SAFARI}>Safari</a>
                   </li>
                 </ul>
               </div>

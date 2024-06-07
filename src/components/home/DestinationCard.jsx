@@ -50,7 +50,7 @@ function DestinationCard({ place }) {
             })}
           </CardDescription>
           <div className="priceDesc pt-4">
-            <span className="flex flex-row gap-2 block">
+            <span className="flex flex-row gap-2">
               {place?.tags &&
                 place?.tags?.map((tag, key) => (
                   <span

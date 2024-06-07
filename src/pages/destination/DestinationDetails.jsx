@@ -21,7 +21,7 @@ function DestinationDetails() {
       <div className="group relative -mb-0">
         {data?.images && (
           <ImageCarousel
-            className="h-[50vh] md:h-screen "
+            className="h-[25vh] md:h-[60vh]"
             images={data.images}
           />
         )}
