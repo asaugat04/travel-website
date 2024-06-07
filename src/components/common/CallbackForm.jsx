@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { useState } from "react";
 
-function CallbackForm() {
+function CallbackForm({ buttonName }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,7 +20,7 @@ function CallbackForm() {
     <div>
       <div className="grid gap-4 py-4">
         <div className="grid grid-cols-4 items-center gap-4">
-          <Label htmlFor="name" className="text-right">
+          <Label htmlFor="name" className="font-normal text-center text-xs">
             Name
           </Label>
           <Input
@@ -33,7 +33,7 @@ function CallbackForm() {
           />
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
-          <Label htmlFor="email" className="text-right">
+          <Label htmlFor="email" className="font-normal text-center">
             Email
           </Label>
           <Input
@@ -47,7 +47,7 @@ function CallbackForm() {
           />
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
-          <Label htmlFor="phone" className="text-right">
+          <Label htmlFor="phone" className="font-normal text-center">
             Phone
           </Label>
           <div className="col-span-3 grid grid-cols-10 items-center gap-2">
@@ -72,7 +72,7 @@ function CallbackForm() {
           </div>
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
-          <Label htmlFor="date" className="text-right">
+          <Label htmlFor="date" className="font-normal text-center">
             Travel Date
           </Label>
           <Popover>
@@ -105,7 +105,7 @@ function CallbackForm() {
           </Popover>
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
-          <Label htmlFor="traveller_count" className="text-right">
+          <Label htmlFor="traveller_count" className="font-normal text-center">
             Traveller count
           </Label>
           <Input
@@ -120,7 +120,7 @@ function CallbackForm() {
           />
         </div>
         <div className="grid grid-cols-4 items-center gap-4">
-          <Label htmlFor="message" className="text-right">
+          <Label htmlFor="message" className="font-normal text-center">
             Message
           </Label>
           <Input
@@ -134,6 +134,9 @@ function CallbackForm() {
           />
         </div>
       </div>
+      <Button className="bg-yellow-600 w-full" type="submit">
+        {buttonName}
+      </Button>
     </div>
   );
 }

@@ -8,12 +8,12 @@ export default function PlacesCarousel({ data, destination }) {
       <div className="flex flex-row justify-between p-3  py-10 md:m-auto w-full md:w-11/12">
         <h1 className="text-2xl font-bold text-left">{destination}</h1>
         <Link
-          to={PATH[destination.toUpperCase()]}
+          to={`${PATH.DESTINATIONDETAILS}${destination.toLowerCase()}`}
           className="text-yellow-600 flex items-center gap-2 font-bold group "
         >
           View all
-          <span className="icon flex items-center justify-center rounded-full bg-yellow-600 text-white inline-block w-7 h-7 text-center p-1">
-            <i className="fa-solid fa-angle-right transition-all group-hover:ml-12 group-hover:rotate-180 group-hover:text-yellow-600"></i>
+          <span className="icon flex items-center justify-center rounded-full bg-yellow-600 text-white  w-7 h-7 text-center p-1">
+            <i className="fa-solid fa-angle-right transition-all group-hover:ml-3"></i>
           </span>
         </Link>
       </div>

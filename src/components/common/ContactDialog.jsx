@@ -21,7 +21,7 @@ function ContactDialog({ className, displayName, place }) {
       </DialogTrigger>
       <DialogContent className="max-w-[90vw] rounded sm:max-w-[425px] bg-white border-0 backdrop-blur-3xl">
         <DialogHeader>
-          <DialogTitle>{displayName}</DialogTitle>
+          <DialogTitle className="text-yellow-600">{displayName}</DialogTitle>
           <DialogDescription as="div">
             {place && place.images && place.starting_price && (
               <p className="flex flex-row gap-2">
@@ -32,9 +32,9 @@ function ContactDialog({ className, displayName, place }) {
                   alt={`image of${place?.name}`}
                 />
                 {/* )} */}
-                <p className="text-left text-xs font-semibold text-black">
+                <p className="text-left text-xs font-normal text-black">
                   {place?.name}
-                  <p className="text-left text-xs font-semibold text-black py-2">
+                  <p className="text-left text-xs text-black py-2">
                     {place.currency + " " + place.starting_price}
                     <span className="line-through text-gray-500 inline-block pl-2">
                       {place.currency + " " + place.strike_through_price}
@@ -45,12 +45,7 @@ function ContactDialog({ className, displayName, place }) {
             )}
           </DialogDescription>
         </DialogHeader>
-        <CallbackForm />
-        <DialogFooter>
-          <Button className="bg-yellow-600" type="submit">
-            {displayName}
-          </Button>
-        </DialogFooter>
+        <CallbackForm buttonName={displayName} />
       </DialogContent>
     </Dialog>
   );

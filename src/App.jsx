@@ -5,7 +5,8 @@ import Contact from "./pages/contact/contact";
 import Navbar from "./components/common/Navbar";
 import path from "./constants/path";
 import Footer from "./components/common/Footer";
-import CountryDetails from "./pages/countries/CountryDetails";
+import DestinationDetails from "./pages/destination/DestinationDetails";
+import TourDetails from "./pages/tour/TourDetails";
 
 function App() {
   return (
@@ -16,7 +17,14 @@ function App() {
           <Route path={path.HOME} element={<Home />} />
           <Route path={path.ABOUT} element={<About />} />
           <Route path={path.CONTACT} element={<Contact />} />
-          <Route path={path.COUNTRYDETAILS} element={<CountryDetails />} />
+          <Route
+            path={`${path.DESTINATIONDETAILS}:destinationName`}
+            element={<DestinationDetails />}
+          />
+          <Route
+            path={`${path.TOURDETAILS}:tourName`}
+            element={<TourDetails />}
+          />
         </Routes>
         <Footer />
       </Router>

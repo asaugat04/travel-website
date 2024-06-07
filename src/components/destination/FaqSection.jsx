@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/accordion";
 
 function FaqSection({ data }) {
-  console.log(data);
   return (
     <>
       <Accordion collapsible>
