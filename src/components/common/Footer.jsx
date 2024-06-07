@@ -9,11 +9,13 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-center">
           <div className="company-description md:border-r p-3 md:my-5 w-full flex-1">
             <div className="flex flex-row justify-center">
-              <img
-                src="https://admin.ntb.gov.np/image-cache/nepal_tourism_board_logo-1624420115.png?p=main&s=984ce8418b32a2ceb42af3f197752603"
-                alt="footer-logo"
-                className="w-32"
-              />
+              <a href={PATH.HOME}>
+                <img
+                  src="https://admin.ntb.gov.np/image-cache/nepal_tourism_board_logo-1624420115.png?p=main&s=984ce8418b32a2ceb42af3f197752603"
+                  alt="footer-logo"
+                  className="w-32"
+                />
+              </a>
             </div>
             <p className="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia

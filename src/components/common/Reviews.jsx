@@ -28,6 +28,7 @@ function Reviews({ reviewsData }) {
               5<StarFilledIcon className="text-yellow-500" />
             </span>
             <Progress
+              indicatorClassName="bg-yellow-600"
               className="w-full ml-2 text-yellow-600"
               value={(reviewsData?.five / reviewsData?.total_reviews) * 100}
             />
@@ -37,6 +38,7 @@ function Reviews({ reviewsData }) {
               4<StarFilledIcon className="text-yellow-500" />
             </span>
             <Progress
+              indicatorClassName="bg-yellow-600"
               className="w-full ml-2 text-yellow-600"
               value={(reviewsData?.four / reviewsData?.total_reviews) * 100}
             />
@@ -46,6 +48,7 @@ function Reviews({ reviewsData }) {
               3<StarFilledIcon className="text-yellow-500" />
             </span>
             <Progress
+              indicatorClassName="bg-yellow-600"
               className="w-full ml-2 text-yellow-600"
               value={(reviewsData?.three / reviewsData?.total_reviews) * 100}
             />
@@ -55,6 +58,7 @@ function Reviews({ reviewsData }) {
               2<StarFilledIcon className="text-yellow-500" />
             </span>
             <Progress
+              indicatorClassName="bg-yellow-600"
               className="w-full ml-2 text-yellow-600"
               value={(reviewsData?.two / reviewsData?.total_reviews) * 100}
             />
@@ -64,6 +68,7 @@ function Reviews({ reviewsData }) {
               1<StarFilledIcon className="text-yellow-500" />
             </span>
             <Progress
+              indicatorClassName="bg-yellow-600"
               className="w-full ml-2 text-yellow-600"
               value={(reviewsData?.one / reviewsData?.total_reviews) * 100}
             />

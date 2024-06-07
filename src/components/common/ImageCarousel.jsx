@@ -9,13 +9,13 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-function ImageCarousel({ images, className = "" }) {
+function ImageCarousel({ images, className = "", infiniteScroll = false }) {
   return (
     <Carousel
       plugins={[
         Autoplay({
           delay: 1500 + Math.random() * 1500, // to make autoplay different for each carousel
-          stopOnLastSnap: true,
+          stopOnLastSnap: !infiniteScroll,
         }),
       ]}
       className="group"

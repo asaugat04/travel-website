@@ -5,7 +5,7 @@ import ImageCarousel from "@/components/common/ImageCarousel";
 import ContactDialog from "@/components/common/ContactDialog";
 import DestinationCard from "@/components/home/DestinationCard";
 import FaqSection from "@/components/destination/FaqSection";
-import Reviews from "@/components/destination/Reviews";
+import Reviews from "@/components/common/Reviews";
 
 function DestinationDetails() {
   const { destinationName } = useParams();

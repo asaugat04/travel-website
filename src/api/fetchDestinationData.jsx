@@ -12,6 +12,7 @@ const data = {
     two: 50,
     one: 50,
   },
+
   desc: `Switzerland, nestled in the heart of Europe, is a land of stunning natural beauty, rich history, and unparalleled precision. Bordered by France, Germany, Italy, Austria, and Liechtenstein, this small yet mighty country boasts breathtaking landscapes, including majestic mountains, crystal-clear lakes, and picturesque valleys.
 
 One of Switzerland's most iconic features is its towering Alps, which dominate much of the country's landscape. These snow-capped peaks not only provide a dramatic backdrop but also offer endless opportunities for outdoor adventure. From skiing and snowboarding in world-renowned resorts like Zermatt and St. Moritz to hiking and mountaineering along scenic trails, Switzerland is a paradise for nature enthusiasts.

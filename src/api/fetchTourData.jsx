@@ -1,5 +1,6 @@
 const data = {
-  name: "Glimpse of Switzerland",
+  title: "Glimpse of Switzerland",
+  name: "Glimpse of Switzerland | FREE FIFA Museum Tickets",
   starting_price: 99800.0,
   strike_through_price: 132900.0,
   stays_included: true,
@@ -7,10 +8,40 @@ const data = {
   meals_included: true,
   transport_included: true,
   currency: "INR",
-  duration: "6D",
+  duration: "6 Days & 5 Nights",
   tags: ["Nature", "Adventure", "Culture", "Skiing"],
-  places: ["Zurich", "Gurich", "Lucerne", "Interlaken"],
-  inclusions: ["Stay", "Meals", "Transport", "Sightseeing"],
+  places: [
+    {
+      name: "zurich",
+      desc: "Zurich is a beautiful place in switzerland it has multiple tourist atractions",
+    },
+    {
+      name: "gurich",
+      desc: "Zurich is a beautiful place in switzerland it has multiple tourist atractions",
+    },
+    {
+      name: "lucerne",
+      desc: "Zurich is a beautiful place in switzerland it has multiple tourist atractions",
+    },
+    {
+      name: "interlaken",
+      desc: "Zurich is a beautiful place in switzerland it has multiple tourist atractions",
+    },
+  ],
+  goodToKnows: [
+    "Please carry valid identification proof and the Thrillophilia voucher.",
+    "Travel Insurance is recommended and charges are not included.",
+    "Visa assistance will be provided however charges are not included.",
+    "Please carry valid identification proof and the Thrillophilia voucher.",
+    "Travel Insurance is recommended and charges are not included.",
+  ],
+  inclusions: [
+    "Stay",
+    "Rhine Falls 15-Minute Boat Tour, Switzerland on a Shared basis",
+    "Meals",
+    "Transport",
+    "Sightseeing",
+  ],
   exclusions: ["Flights", "Visa", "Insurance"],
   highlights: [
     "Explore the charming city of Zurich",
@@ -60,8 +91,88 @@ const data = {
 
       id: 7048,
     },
+    {
+      day: 3,
+      location: "Lucerne",
+      title: "Trip to Mountain in Lucerne",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, tempora blanditiis iure voluptate ratione, quos minima excepturi ad soluta culpa obcaecati vel officiis magni error est placeat perferendis consequatur ab.",
+      activities: [
+        "Visit to the Gurich Zoo",
+        "Boat ride on Lake Gurich",
+        "Lunch at a local cafe",
+      ],
+      stay: {
+        name: "Hotel XYZ",
+        address: "456, XYZ Street, Gurich",
+        checkin: "12:00 PM",
+        checkout: "10:00 AM",
+      },
+
+      id: 7048,
+    },
+    {
+      day: 4,
+      location: "Interlaken",
+      title: "Exploring Interlaken",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, tempora blanditiis iure voluptate ratione, quos minima excepturi ad soluta culpa obcaecati vel officiis magni error est placeat perferendis consequatur ab.",
+      activities: [
+        "Visit to the Gurich Zoo",
+        "Boat ride on Lake Gurich",
+        "Lunch at a local cafe",
+      ],
+      stay: {
+        name: "Hotel XYZ",
+        address: "456, XYZ Street, Gurich",
+        checkin: "12:00 PM",
+        checkout: "10:00 AM",
+      },
+
+      id: 7048,
+    },
+    {
+      day: 5,
+      location: "sulwald",
+      title: "Day at leisure in sulwald",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, tempora blanditiis iure voluptate ratione, quos minima excepturi ad soluta culpa obcaecati vel officiis magni error est placeat perferendis consequatur ab.",
+      activities: [
+        "Visit to the Gurich Zoo",
+        "Boat ride on Lake Gurich",
+        "Lunch at a local cafe",
+      ],
+      stay: {
+        name: "Hotel XYZ",
+        address: "456, XYZ Street, Gurich",
+        checkin: "12:00 PM",
+        checkout: "10:00 AM",
+      },
+
+      id: 7048,
+    },
+    {
+      day: 6,
+      location: "Gurich",
+      title: "Departure Day",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, tempora blanditiis iure voluptate ratione, quos minima excepturi ad soluta culpa obcaecati vel officiis magni error est placeat perferendis consequatur ab.",
+      activities: [
+        "Visit to the Gurich Zoo",
+        "Boat ride on Lake Gurich",
+        "Lunch at a local cafe",
+      ],
+      stay: {
+        name: "Hotel XYZ",
+        address: "456, XYZ Street, Gurich",
+        checkin: "12:00 PM",
+        checkout: "10:00 AM",
+      },
+
+      id: 7048,
+    },
   ],
-  reviews: {
+  ratings: {
     total_reviews: 1000,
     rating: 4.5,
     five: 500,
@@ -70,6 +181,40 @@ const data = {
     two: 50,
     one: 50,
   },
+  reviews: [
+    {
+      name: "John Doe",
+      rating: 4,
+      image: "https://picsum.photos/200?q=1",
+      review:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, tempora blanditiis iure voluptate ratione, quos minima excepturi ad soluta culpa obcaecati vel officiis magni error est placeat perferendis consequatur ab.",
+      date: "2021-12-12",
+    },
+    {
+      name: "Jane Doe",
+      rating: 5,
+      image: "https://picsum.photos/200?q=2",
+      review:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, tempora blanditiis iure voluptate ratione, quos minima excepturi ad soluta culpa obcaecati vel officiis magni error est placeat perferendis consequatur ab.",
+      date: "2021-12-12",
+    },
+    {
+      name: "John Doe",
+      rating: 4,
+      image: "https://picsum.photos/200?q=3",
+      review:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, tempora blanditiis iure voluptate ratione, quos minima excepturi ad soluta culpa obcaecati vel officiis magni error est placeat perferendis consequatur ab.",
+      date: "2021-12-12",
+    },
+    {
+      name: "Jane Doe",
+      rating: 5,
+      image: "https://picsum.photos/200?q=4",
+      review:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, tempora blanditiis iure voluptate ratione, quos minima excepturi ad soluta culpa obcaecati vel officiis magni error est placeat perferendis consequatur ab.",
+      date: "2021-12-12",
+    },
+  ],
   desc: `Switzerland, nestled in the heart of Europe, is a land of stunning natural beauty, rich history, and unparalleled precision. Bordered by France, Germany, Italy, Austria, and Liechtenstein, this small yet mighty country boasts breathtaking landscapes, including majestic mountains, crystal-clear lakes, and picturesque valleys.
 
 One of Switzerland's most iconic features is its towering Alps, which dominate much of the country's landscape. These snow-capped peaks not only provide a dramatic backdrop but also offer endless opportunities for outdoor adventure. From skiing and snowboarding in world-renowned resorts like Zermatt and St. Moritz to hiking and mountaineering along scenic trails, Switzerland is a paradise for nature enthusiasts.

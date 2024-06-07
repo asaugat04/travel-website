@@ -12,6 +12,7 @@ function App() {
   return (
     <div>
       <Router>
+        {window.scrollTo(0, 0)}
         {/* <Navbar /> */}
         <Routes>
           <Route path={path.HOME} element={<Home />} />
